@@ -492,6 +492,9 @@ section {
   .skills .content .col-right {
     margin-top: 40px;
   }
+  .services .title p {
+    width: auto;
+  }
   .services .content {
     flex-direction: column;
   }
@@ -499,7 +502,8 @@ section {
     margin: 10px auto;
     border: 1px solid crimson;
   }
-  .contact .content .contact-form {
+  .contact .content .row .contact-form {
     padding: 35px 40px;
+    width: auto;
   }
 }/*# sourceMappingURL=style.css.map */

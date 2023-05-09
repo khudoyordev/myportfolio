@@ -545,8 +545,14 @@ section {
   }
 
   .services {
+    .title {
+      p {
+        width: auto;
+      }
+    }
     .content {
       flex-direction: column;
+
       .card {
         margin: 10px auto;
         border: 1px solid crimson;
@@ -556,8 +562,11 @@ section {
 
   .contact {
     .content {
-      .contact-form {
-        padding: 35px 40px;
+      .row {
+        .contact-form {
+          padding: 35px 40px;
+          width: auto;
+        }
       }
     }
   }

@@ -30,6 +30,27 @@ section {
   background-color: #fff;
 }
 
+.scrollToBtn {
+  z-index: 999;
+  position: fixed;
+  background-color: crimson;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  right: 0;
+  bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.scrollToBtn.active {
+  right: 20px;
+  opacity: 1;
+}
 .header {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.1);
@@ -63,6 +84,37 @@ section {
       color: crimson;
     }
   }
+  .menu-btn.active {
+    z-index: 999;
+    background-image: url(./images/close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+  }
+}
+
+.header .navbar.active {
+  z-index: 888;
+  position: fixed;
+  background: #fff;
+  top: 0;
+  right: 0;
+  width: 380px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 5s ease;
+}
+
+.sticky {
+  background-color: crimson;
+  padding: 15px 100px;
+  transition: all 0.3s ease;
 }
 
 .main {
@@ -456,6 +508,18 @@ section {
   }
 }
 
+.reveal {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .footer {
   background: #000016;
   text-align: center;
@@ -474,9 +538,15 @@ section {
 @media (max-width: 1040px) {
   .header {
     padding: 12px 20px;
-    background: crimson;
     .navbar {
       display: none;
+      .nav-link {
+        color: #000;
+        font-size: 22px;
+        margin: 10px;
+        padding: 0 20px;
+        border-radius: 20px;
+      }
     }
     .menu-btn {
       position: absolute;

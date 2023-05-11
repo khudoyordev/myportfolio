@@ -82,7 +82,7 @@ section {
   transition: 0.5s ease;
 }
 .header .navbar .nav-link:hover {
-  color: crimson;
+  color: #550011;
 }
 .header .menu-btn.active {
   z-index: 999;
